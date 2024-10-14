@@ -113,7 +113,7 @@ function main() {
         return
       }
       const content = urls.join('\n')
-      const encodedContent = encodeBase64(content)
+      const encodedContent = encodeBase64(content);
       // $notification.post('订阅成功', '获取到订阅链接', encodedContent)
       postToDpaste(encodedContent)
     })
