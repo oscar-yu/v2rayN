@@ -2,7 +2,7 @@
  * @Author       : oscar.yu
  * @Date         : 2024-10-14 10:46:19
  * @LastEditors  : oscar.yu
- * @LastEditTime : 2024-10-14 11:25:44
+ * @LastEditTime : 2024-10-14 11:29:55
  * @Description  : BeesVPN自动获取订阅地址
  */
 // 定义用于生成设备ID的函数
@@ -77,9 +77,17 @@ function fetchAndProcessSubscription(subscribeUrl, token, callback) {
 // 转换为订阅地址
 function postToDpaste(encodedContent) {
   console.log(encodedContent)
-  let params = {
+  const headers = {
+    'Content-Type': 'application/json; charset=utf-8'
+  }
+  const payload = {
+    expiry_days: 3,
+    content: encodedContent
+  }
+  const params = {
     url: 'https://dpaste.com/api/',
-    body: { 'expiry_days': 3, 'content': encodedContent }
+    headers: headers,
+    body: JSON.stringify(payload)
   }
   $httpClient.post(params, (errormsg, response, data) => {
     console.log(data)
