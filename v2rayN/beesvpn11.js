@@ -76,7 +76,7 @@ function fetchAndProcessSubscription(subscribeUrl, token, callback) {
 
 // 转换为订阅地址
 function postToDpaste(encodedContent) {
-  console.log(encodedContent)
+  // console.log(encodedContent)
   const headers = {
     'Content-Type': 'application/x-www-form-urlencoded'
   }
