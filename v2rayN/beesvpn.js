@@ -2,7 +2,7 @@
  * @Author       : oscar.yu
  * @Date         : 2024-10-14 10:46:19
  * @LastEditors  : oscar.yu
- * @LastEditTime : 2024-10-14 10:59:25
+ * @LastEditTime : 2024-10-14 11:05:25
  * @Description  : BeesVPN自动获取订阅地址
  */
 // 定义用于生成设备ID的函数
