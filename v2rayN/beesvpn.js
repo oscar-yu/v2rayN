@@ -90,13 +90,15 @@ function postToDpaste(encodedContent) {
     body: "content=" + encodeURIComponent(encodedContent),
   }
   $httpClient.post(params, (errormsg, response, data) => {
+    console.log(errormsg)
+    console.log(response)
     console.log(data)
-    if (response.status == 200) {
-      let dpasteUrl = data.trim() + '.txt'
-      console.log('恭喜你成功获得订阅：' + dpasteUrl)
-    } else {
-      console.log('获取订阅地址失败：' + errormsg)
-    }
+    // if (response.status == 200) {
+    //   let dpasteUrl = data.trim() + '.txt'
+    //   console.log('恭喜你成功获得订阅：' + dpasteUrl)
+    // } else {
+    //   console.log('获取订阅地址失败：' + errormsg)
+    // }
   })
 }
 function encodeBase64(str) {
