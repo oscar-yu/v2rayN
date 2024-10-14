@@ -89,7 +89,12 @@ function postToDpaste(encodedContent) {
     }
   })
 }
-
+function encodeBase64(str) {
+    return btoa(str);
+}
+function decodeBase64(encodedStr) {
+    return atob(encodedStr);
+}
 // 主函数
 function main() {
   const apiUrl = 'https://94.74.97.241/api/v1'
@@ -108,7 +113,7 @@ function main() {
         return
       }
       const content = urls.join('\n')
-      const encodedContent = $text.base64Encode(content)
+      const encodedContent = encodeBase64(content)
       // $notification.post('订阅成功', '获取到订阅链接', encodedContent)
       postToDpaste(encodedContent)
     })
