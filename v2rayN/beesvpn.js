@@ -1,3 +1,10 @@
+/*
+ * @Author       : oscar.yu
+ * @Date         : 2024-10-14 10:46:19
+ * @LastEditors  : oscar.yu
+ * @LastEditTime : 2024-10-14 11:08:25
+ * @Description  : BeesVPN自动获取订阅地址
+ */
 // 定义用于生成设备ID的函数
 function generateDeviceId() {
   var prefix = '001168.'
