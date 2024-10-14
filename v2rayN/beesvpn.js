@@ -76,11 +76,13 @@ function fetchAndProcessSubscription(subscribeUrl, token, callback) {
 
 // 转换为订阅地址
 function postToDpaste(encodedContent) {
+  console.log(encodedContent)
   let params = {
     url: 'https://dpaste.com/api/',
     body: JSON.stringify({ expiry_days: 3, content: encodedContent })
   }
   $httpClient.post(params, (errormsg, response, data) => {
+    console.log(data)
     if (response.status == 200) {
       let dpasteUrl = data.trim() + '.txt'
       console.log('恭喜你成功获得订阅：' + dpasteUrl)
